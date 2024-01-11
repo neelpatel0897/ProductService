@@ -1,15 +1,20 @@
 package dev.neel.ProductService.models;
 
-import org.hibernate.mapping.List;
-
 import jakarta.persistence.Entity;
+
+import jakarta.persistence.OneToMany;
+
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
-@Entity(name = "categories")
-public class Category extends BaseModel {
-    private String name;    
-    
+@Entity
+public class Category extends BaseModel{
+    private String name;
+
+    @OneToMany(mappedBy = "category")
+    List<Product> products;
 }

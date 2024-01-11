@@ -11,7 +11,7 @@ public class SelfStoreProductServiceImpl implements ProductService{
 
     @Override
     public GenericProductDto getProductById(Long id) {
-        // TODO Auto-generated method stub
+        
         return null;
     }
 
