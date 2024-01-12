@@ -2,13 +2,20 @@ package dev.neel.ProductService.services;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import dev.neel.ProductService.dtos.GenericProductDto;
+import dev.neel.ProductService.models.Category;
+import dev.neel.ProductService.models.Price;
+import dev.neel.ProductService.models.Product;
+import dev.neel.ProductService.repositories.ProductRepository;
 
 @Service("SelfStoreProductServiceImpl")
+@Primary
 public class SelfStoreProductServiceImpl implements ProductService{
 
+    
     @Override
     public GenericProductDto getProductById(Long id) {
         
@@ -35,7 +42,8 @@ public class SelfStoreProductServiceImpl implements ProductService{
     @Override
     public GenericProductDto createProduct(GenericProductDto genericProductDto) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createProduct'");
+        return null;
+        
     }
     
 }
