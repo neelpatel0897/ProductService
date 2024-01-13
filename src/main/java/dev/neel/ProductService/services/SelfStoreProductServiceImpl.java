@@ -6,10 +6,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import dev.neel.ProductService.dtos.GenericProductDto;
-import dev.neel.ProductService.models.Category;
-import dev.neel.ProductService.models.Price;
-import dev.neel.ProductService.models.Product;
-import dev.neel.ProductService.repositories.ProductRepository;
+
 
 @Service("SelfStoreProductServiceImpl")
 @Primary
