@@ -11,7 +11,7 @@ import lombok.Setter;
 
 import java.util.*;
 
-import org.hibernate.FetchMode;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Fetch;
 
 @Getter
@@ -20,9 +20,10 @@ import org.hibernate.annotations.Fetch;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Category extends BaseModel{
-    @Column(name = "category_name")
+    @Column
     private String name;
 
-    @OneToMany(mappedBy = "category")    
-    List<Product> products;
+    @OneToMany(mappedBy = "category")
+    @Fetch(FetchMode.SUBSELECT)  
+    List<Product> products=new ArrayList<>();
 }

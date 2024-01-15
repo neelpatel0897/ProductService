@@ -15,9 +15,9 @@ public class Order extends BaseModel {
 
     @ManyToMany()
     @JoinTable(
-        name = "products_orders",
-        joinColumns =@JoinColumn(name = "orders_id"),
-        inverseJoinColumns = @JoinColumn(name = "products_id")
+        name = "product_orders",
+        joinColumns =@JoinColumn(name = "order_id"),
+        inverseJoinColumns = @JoinColumn(name = "product_id")
     )       
     private List<Product> product;
 }
